@@ -3,8 +3,8 @@ import axios from 'axios';
 
 @Injectable()
 export class MailchimpService {
-  private readonly apiKey = 'md--6kYHyq7hO-J665pj2eVtQ'; // Replace with your API Key
-  private readonly baseUrl = `https://mandrillapp.com/api/1.0`;
+  private readonly apiKey = process.env.API_KEY; // Replace with your API Key
+  private readonly baseUrl = process.env.BASE_URL;
 
   async sendEmail(toEmail: string, subject: string, body: string): Promise<void> {
     try {

@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ConfigModule } from '@nestjs/config';
 import { CustomerModule } from './customer/customer.module';
 import { TableModule } from './table/table.module';
 import { ReservationModule } from './reservation/reservation.module';
@@ -18,6 +19,7 @@ import { MailchimpService } from './mailchimp/mailchimp.service';
       autoLoadEntities: true,
       synchronize: true,
     }),
+    ConfigModule.forRoot(),
     CustomerModule,
     TableModule,
     ReservationModule,

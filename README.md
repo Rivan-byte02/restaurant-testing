@@ -53,7 +53,8 @@ npm install
 ### Environment Variables
 Create a `.env` file in the root directory and add the following:
 ```env
-# Application
+API_KEY=md--6kYHyq7hO-J665pj2eVtQ
+BASE_URL=https://mandrillapp.com/api/1.0
 PORT=3000
 ```
 
